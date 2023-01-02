@@ -97,6 +97,7 @@ img {
 
 .button {
   width: 100%;
+  display: inline-block;
   max-width: 163px;
   padding: 8px 34px;
   border-radius: 22px;
@@ -104,12 +105,89 @@ img {
   font-size: 14px;
   line-height: 28px;
   text-align: center;
-
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .button-green {
-  background-color: var(--gradient);
-  /* color: #fff; */
+  background-color: var(--green-color);
+  background-image: var(--gradient);
+  color: #fff;
+}
+
+.button-green:hover {
+  opacity: 0.4;
+}
+
+
+/* LOGO */
+
+.logo {
+  display: flex;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
+
+.logo__img {
+    width: 139px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* SITENAV */
+
+
+.sitenav__list {
+  display: flex;
+  align-items:center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.sitenav__item {
+  position: relative;
+  padding-top:32px;
+  padding-bottom:32px ;
+}
+
+.sitenav__item::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--green-color);
+  background-image: var(--gradient);
+  opacity: 0;
+  content: "";
+}
+
+.sitenav__item:hover::after {
+  opacity: 1;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.sitenav__link {
+  display: block;
+  text-decoration: none;
+  color: var(--gray-color);
+}
+
+.sitenav__link:hover {
+  color: var(--text-color);
 }
 
 
@@ -130,12 +208,25 @@ input:-webkit-autofill:focus {
 
 
 
+/* SITE-HEADER */
+
+.site-header {
+  background-color: #fff;
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
 /* MAIN-CONTENT */
 
 .main-content {
   flex-grow: 1;
 }
-
 
 
 /* RETINA BACKGROUND IMAGES */

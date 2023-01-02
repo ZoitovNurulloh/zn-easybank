@@ -1,6 +1,39 @@
 /* CUSTOM PROPS */
+:root {
+  --green-color:#30C88F;
+  --text-color:#2D314D;
+  --gray-color:#9597A5;
+  --gradient:  linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+}
 
 /* FONTS */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('../fonts/PublicSans-Thin.woff2') format('woff2'),
+      url('../fonts/PublicSans-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('../fonts/PublicSans-Medium.woff2') format('woff2'),
+      url('../fonts/PublicSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('../fonts/PublicSans-Regular.woff2') format('woff2'),
+      url('../fonts/PublicSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /* GLOBAL */
 
@@ -20,13 +53,14 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #fff;
-  color: #222;
-  font-family: "Arial", sans-serif;
+  background-color: #fafafa;
+  color: var(--gray-color);
+  font-family:"Public Sans", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 26px;
   padding: 0;
   margin: 0;
+  letter-spacing: -0.25;
 }
 
 img {
@@ -38,9 +72,9 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -59,6 +93,24 @@ img {
   overflow: hidden;
 }
 
+/* BUTTON */
+
+.button {
+  width: 100%;
+  max-width: 163px;
+  padding: 8px 34px;
+  border-radius: 22px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+
+}
+
+.button-green {
+  background-color: var(--gradient);
+  /* color: #fff; */
+}
 
 
 /* AUTOFILL-STYLES */

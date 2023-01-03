@@ -1,16 +1,16 @@
 /* CUSTOM PROPS */
 :root {
-  --green-color:#30C88F;
-  --text-color:#2D314D;
-  --gray-color:#9597A5;
-  --gradient:  linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+  --green-color: #30C88F;
+  --text-color: #2D314D;
+  --gray-color: #9597A5;
+  --gradient: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
 }
 
 /* FONTS */
 @font-face {
   font-family: 'Public Sans';
   src: url('../fonts/PublicSans-Thin.woff2') format('woff2'),
-      url('../fonts/PublicSans-Thin.woff') format('woff');
+    url('../fonts/PublicSans-Thin.woff') format('woff');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -19,7 +19,7 @@
 @font-face {
   font-family: 'Public Sans';
   src: url('../fonts/PublicSans-Medium.woff2') format('woff2'),
-      url('../fonts/PublicSans-Medium.woff') format('woff');
+    url('../fonts/PublicSans-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 @font-face {
   font-family: 'Public Sans';
   src: url('../fonts/PublicSans-Regular.woff2') format('woff2'),
-      url('../fonts/PublicSans-Regular.woff') format('woff');
+    url('../fonts/PublicSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing:inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -55,7 +55,7 @@ body {
   height: 100%;
   background-color: #fafafa;
   color: var(--gray-color);
-  font-family:"Public Sans", "Arial", sans-serif;
+  font-family: "Public Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 26px;
   padding: 0;
@@ -137,7 +137,7 @@ img {
 }
 
 .logo__img {
-    width: 139px;
+  width: 139px;
   height: 20px;
   object-fit: contain;
 }
@@ -147,7 +147,7 @@ img {
 
 .sitenav__list {
   display: flex;
-  align-items:center;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -157,8 +157,8 @@ img {
 
 .sitenav__item {
   position: relative;
-  padding-top:32px;
-  padding-bottom:32px ;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .sitenav__item::after {
@@ -263,7 +263,7 @@ input:-webkit-autofill:focus {
   margin-bottom: 36px;
   font-size: 18px;
   line-height: 28px;
-  color:var(--gray-color);
+  color: var(--gray-color);
   letter-spacing: -0.28px;
 }
 
@@ -271,17 +271,105 @@ input:-webkit-autofill:focus {
   position: absolute;
   width: 730px;
   height: 900px;
-  left: calc(50% + 74px) ;
+  left: calc(50% + 74px);
   top: -112px;
 }
 
-/* RETINA BACKGROUND IMAGES */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
 
+/* FEATURES */
+
+.features {
+  padding-top: 96px;
+  padding-bottom: 94px;
+  background-color: #f4f5f7;
 }
+
+.features__info {
+  width: 100%;
+  max-width: 635px;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 100;
+  font-size: 40px;
+  line-height: 64px;
+  color: var(--text-color);
+  letter-spacing: -0.71px;
+}
+
+.features__text {
+  margin-top: 0;
+  margin-bottom: 72px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--gray-color);
+  letter-spacing: -0.28px
+}
+
+.features__list {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+  margin-left: -30px;
+  margin-bottom: 80px;
+  list-style: none;
+}
+
+.features__item {
+  width: 100%;
+  max-width: 255px;
+  margin-left: 30px;
+  margin-bottom: 80px;
+}
+
+/* FEATURE */
+
+.features__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--green-color);
+  background-image: var(--gradient);
+}
+
+.feature__icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.feature__icon--simple-budgeting {
+  width: 33px;
+  height: 40px;
+}
+
+.feature__title {
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 100;
+  color: var(--text-color);
+  letter-spacing: -0.42px
+}
+
+.feature__description {
+  margin-top: 0;
+  letter-spacing: -0.25px;
+}
+
+/* RETINA BACKGROUND IMAGES */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {}

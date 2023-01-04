@@ -125,7 +125,7 @@ img {
 /* LOGO */
 
 .logo {
-  display: flex;
+  display: inline-block;
 }
 
 .logo:hover {
@@ -137,6 +137,7 @@ img {
 }
 
 .logo__img {
+  display: flex;
   width: 139px;
   height: 20px;
   object-fit: contain;
@@ -279,6 +280,39 @@ opacity: 0.6;
   margin: 0;
   font-size: 13px;
   line-height: 18px;
+}
+
+
+/* SOCIALS */
+
+.socials {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 13px;
+}
+
+.socials__link {
+  display: flex;
+  color: #fff;
+}
+
+.socials__link:hover {
+  color: var(--green-color);
+}
+
+.socials__link:active {
+  opacity: 0.6;
+}
+
+.socials__icon {
+  object-fit: contain;
+  object-position: center;
 }
 
 
@@ -442,7 +476,7 @@ opacity: 0.6;
 
 /* INDEX ARTICLES */
 .index-articles {
-  padding-top: 80px;
+  padding-top: 85px;
   padding-bottom: 80px;
 }
 
@@ -457,6 +491,85 @@ opacity: 0.6;
 }
 
 
+/* SITE-FOOTER  */
+.site-footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: var(--text-color);
+  color: #fff;
+}
+
+.site-footer__container {
+  display: flex;
+}
+
+.site-footer__logo-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 160px;
+  margin-right: 130px;
+}
+
+.site-footer__logo {
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.site-footer__links-wrapper {
+  display: flex;
+  margin-right: auto;
+}
+
+.site-footer__links {
+  width: 160px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-footer__links:not(:last-child) {
+  margin-right: 30px;
+}
+
+.site-footer__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.site-footer__links-link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.site-footer__links-link:hover {
+  color: var(--green-color);
+}
+
+.site-footer__links-link:active {
+  opacity: 0.6;
+}
+
+.site-footer__cta-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.site-footer__cta-button {
+  margin-bottom: 24px;
+}
+
+.site-footer__copy {
+  margin: 0;
+  font-size: 15px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.5);
+}
 
 /* RETINA BACKGROUND IMAGES */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
